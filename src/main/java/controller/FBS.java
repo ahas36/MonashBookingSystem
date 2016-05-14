@@ -84,6 +84,8 @@ public class FBS {
             boolean flag=false;
             String res = "Facility " + sb.getFacilityId() + " has conflict with the following entered date(s): \n";
             for (SubBooking subBookin : b.getSubBookingList()) {
+                if(!subBookin.getFacilityId().equals(sb.getFacilityId()))
+                    continue;
                 if ((subBookin.getStartDate().getTime() > sb.getStartDate().getTime() && subBookin.getStartDate().getTime() < sb.getEndDate().getTime())
                         || (subBookin.getEndDate().getTime() > sb.getStartDate().getTime() && subBookin.getEndDate().getTime() < sb.getEndDate().getTime())
                         || (subBookin.getStartDate().getTime() <= sb.getStartDate().getTime() && subBookin.getEndDate().getTime() >= sb.getEndDate().getTime())) {

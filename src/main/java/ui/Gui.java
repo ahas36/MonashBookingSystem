@@ -694,6 +694,8 @@ public class Gui extends javax.swing.JFrame {
             } else {
                 facilityType.setModel(euqipmentTypeModel);
             }
+            facilityType.setSelectedIndex(1);
+            
         }
     }//GEN-LAST:event_facilityItemStateChanged
 
