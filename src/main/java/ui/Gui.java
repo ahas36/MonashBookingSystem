@@ -39,9 +39,9 @@ public class Gui extends javax.swing.JFrame {
         initComponents();
         admin = null;
 
-        homePanel.setVisible(true);
-        loginPanel.setVisible(false);
-        admin = fbs.findAdminByUsername("admin");
+        homePanel.setVisible(false);
+        loginPanel.setVisible(true);
+        admin = null;
         panelCreateBookingInfo.setVisible(false);
         String[] typeCat = {"Room", "Equipment"};
         DefaultComboBoxModel comboBoxModel = new DefaultComboBoxModel();
